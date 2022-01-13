@@ -45,7 +45,7 @@ namespace WpfApp26Core
             WindowState = WindowState.Normal;
         }
 
-        private void SaveButton_OnClick(object sender, RoutedEventArgs e)
+        private async void SaveButton_OnClick(object sender, RoutedEventArgs e)
         {
             if (captureImage.Source == null)
             {

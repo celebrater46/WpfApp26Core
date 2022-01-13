@@ -30,7 +30,7 @@
             Margin="10" 
             HorizontalAlignment="Center" 
             VerticalAlignment="Center" 
-            FontSize="60" 
+            FontSize="24" 
             Visibility="Collapsed"/>
         <StackPanel Grid.Row="1" Background="LightSteelBlue" Orientation="Horizontal">
             <Button x:Name="captureButton" Content="Capture(_1)" Click="CaptureButton_OnClick"/>
