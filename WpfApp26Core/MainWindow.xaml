@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp26Core"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="The Capture" Height="400" Width="640"
+        ResizeMode="CanResizeWithGrip"
+        WindowStyle="ToolWindow">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="SlateGray">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Viewbox>
+            <Image x:Name="captureImage" Margin="5"/>
+        </Viewbox>
+        <TextBlock 
+            x:Name="saveInfo" 
+            Text="The screen has been saved successfully." 
+            Margin="10" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            FontSize="60" 
+            Visibility="Collapsed"/>
+        <StackPanel Grid.Row="1" Background="LightSteelBlue" Orientation="Horizontal">
+            <Button x:Name="captureButton" Content="Capture(_1)" Click="CaptureButton_OnClick"/>
+            <Button x:Name="saveButton" Content="Save(_2)" Click="SaveButton_OnClick"/>
+            <Button x:Name="captureAndSaveButton" Content="Capture and Save(_3)" Click="CaptureAndSaveButton_OnClick"/>
+        </StackPanel>
     </Grid>
 </Window>
